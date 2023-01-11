@@ -5,3 +5,8 @@ two_digit_number=int(two_digit_number)#type casting
 num=two_digit_number/10;
 rem=two_digit_number//10;
 print(num+rem)
+
+#or
+#first_num=int(two_digit_number[0]);
+#second_num=int(two_digit_number[1]);
+#print(first_num+second_num)
