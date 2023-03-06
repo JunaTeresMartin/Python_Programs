@@ -1,5 +1,5 @@
 #AUTHOR   :  JUNA TERES MARTIN
-#PROGRAM  :  A program to do ceaser cipher of a string to encode the message
+#PROGRAM  :  A program to do ceaser cipher of a string to encrypt/encode the message
 #DATE     :  06-03-2023
 
 string=input("Enter a string: ")
