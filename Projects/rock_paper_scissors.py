@@ -83,3 +83,5 @@ elif your_choice==2:
             print("computer:")
             print(scissors)
             print("\ndraw")
+else:
+       print("Invalid choice. Please choose between 0-2")      
