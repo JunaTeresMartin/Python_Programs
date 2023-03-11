@@ -59,7 +59,7 @@ elif your_choice==1:
     if computer==0:
             print("computer:")
             print(rock)
-            print("\nYou lose")
+            print("\nYou won")
     elif computer==1:
             print("computer:")
             print(paper)
@@ -67,7 +67,7 @@ elif your_choice==1:
     elif computer==2:
             print("computer:")
             print(scissors)
-            print("\nYou won")
+            print("\nYou lose")
 elif your_choice==2:
     print("you:")
     print(scissors)
