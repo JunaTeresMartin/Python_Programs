@@ -4,7 +4,13 @@ direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n")
 text = input("Type your message:\n").lower()
 shift = int(input("Type the shift number:\n"))
 
-#TODO-1: Create a function called 'encrypt' that takes the 'text' and 'shift' as inputs.
+def ceasar(text,shift_num,choice):
+    end_text=""
+    for letter in text:
+        position=alphabet.index(letter)
+        if choice==encrypt:
+           
+  
 new_cipher_text=[]
 def encrypt(plain_text,shift_number):
   for letter in plain_text:
