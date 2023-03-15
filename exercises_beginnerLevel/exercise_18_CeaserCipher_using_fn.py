@@ -6,11 +6,13 @@ shift = int(input("Type the shift number:\n"))
 
 def ceasar(text,shift_num,choice):
     end_text=""
+    if choice==decrypt:
+       shift_num*=-1
     for letter in text:
         position=alphabet.index(letter)
-        if choice==encrypt:
+        new_position=position+shift_num
            
-  
+
 new_cipher_text=[]
 def encrypt(plain_text,shift_number):
   for letter in plain_text:
