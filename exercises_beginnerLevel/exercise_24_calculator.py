@@ -30,7 +30,7 @@ your_symbol=input("Choose an operational symbol: ")
 sym=operators[your_symbol]
 result=sym(n1,n2)
 print(f"{n1} {your_symbol} {n2} = {result}")
-continuing=input("Continuing calculation, y for yes, n for no")
+continuing=input(f"Continuing calculation with {result}, y for yes, n for no: ")
 while continuing== 'y':
     your_symbol=input("Choose an operational symbol: ")
     sym=operators[your_symbol]
@@ -38,5 +38,5 @@ while continuing== 'y':
     result2=sym(result,n2)
     print(f"{result} {your_symbol} {n2} = {result2}")
     result=result2
-    continuing=input("Continuing calculation, y for yes, n for no: ")
+    continuing=input(f"Continuing calculation with {result2}, y for yes, n for no: ")
 
