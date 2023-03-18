@@ -18,8 +18,9 @@ else:
     attempts=5
     compare=attempts
 print(number)
-for i in range(attempts):
-    print(f"You have {attempts-i} attempts remaining to guess the number.")
+i=1
+while i<=attempts:
+    print(f"You have {i} attempts remaining to guess the number.")
     guess=int(input("Make a guess: "))
     if guess>number and guess-number>=compare:
         print("Too high")
@@ -31,8 +32,9 @@ for i in range(attempts):
         print("High but near")
     elif guess==number:
         print("Awesome! Your answer is correct")
-        break
-    elif i==attempts-1:
+        break #this break is powerful
+    if i==attempts: #should be added last
         print("Sorry! You lose.")
+    i+=1
     
     
