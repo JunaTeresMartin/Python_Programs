@@ -1,3 +1,8 @@
+#AUTHOR   :  JUNA TERES MARTIN
+#PROGRAM  :  A program that creates the number guessing game
+#DATE     :  19-03-2023
+
+
 art="""
 
    ____                       _   _                                  _               
@@ -8,31 +13,36 @@ art="""
                                                                                                                                                                          
 """
 import random
+def check(guess,number):
+    if guess>number and guess-number>=attempts:
+        print("Too high")
+    elif guess<number and number-guess>=attempts:
+        print("Too low")
+    elif guess<number and number-guess<attempts:
+        print("Low but near")
+    elif guess>number and guess-number<attempts:
+        print("High but near")
+    elif guess==number:
+        print("Awesome! Your answer is correct")
+        return 1
+
+
+
 number=random.randint(1,100)
+print(art)
 difficulty=input("Choose a difficulty. 'e' for easy and 'h' for hard: ")
 print("Welcome to the Number Guessing Game!\nI'm thinking of a number between 1 and 100.\nCan you guess it???")
 if difficulty=='e':
     attempts=10
-    compare=attempts
 else:
     attempts=5
-    compare=attempts
 print(number)
 i=1
 while i<=attempts:
     print(f"You have {i} attempts remaining to guess the number.")
     guess=int(input("Make a guess: "))
-    if guess>number and guess-number>=compare:
-        print("Too high")
-    elif guess<number and number-guess>=compare:
-        print("Too low")
-    elif guess<number and number-guess<compare:
-        print("Low but near")
-    elif guess>number and guess-number<compare:
-        print("High but near")
-    elif guess==number:
-        print("Awesome! Your answer is correct")
-        break #this break is powerful
+    if check(guess,number)==1:
+        break
     if i==attempts: #should be added last
         print("Sorry! You lose.")
     i+=1
