@@ -12,6 +12,11 @@ print("B","C","D")
 print("Jackie"+"Chan")
 print("Jackie "+"Chan")
 print("Jackie","Chan")
+name="joe"
+print("Hello",name) #have space
+print("hello"+name) #no spacing between
+
+
 print(8)
 print(8 * 2)
 print(8 ** 2)
