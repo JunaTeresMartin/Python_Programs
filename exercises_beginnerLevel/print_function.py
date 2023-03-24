@@ -20,8 +20,8 @@ print("hello"+name) #no spacing between
 print(8)
 print(8 * 2)
 print(8 ** 2)
-print(8/12)
-print(8 // 12)
+print(9/2)
+print(9 // 2)
 #print(8/0)  ZeroDivisionError: division by zero
 
 #escape sequences
