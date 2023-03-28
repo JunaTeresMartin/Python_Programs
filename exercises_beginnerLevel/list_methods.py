@@ -9,6 +9,7 @@ for i in range(0,5):
 print(l)
 
 #string to list
+#function
 s="hi hello"
 l=list(s)
 print(l)

@@ -32,3 +32,10 @@ print('good\\day')
 print('good\'day')
 print('good\"day')
 print('g'+'o'*8 +"d day")
+
+names = ["Alice", "Bob", "Charlie", "David", "Emmanuel", "Fiona"]
+
+last_three = names[0:5:-1]
+
+print(last_three)
+print(dir(names))
