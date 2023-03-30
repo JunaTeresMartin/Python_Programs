@@ -7,10 +7,11 @@ logo1='''
           |___/                                               
 '''
 logo2='''
- _  _  ___ 
-( \/ )/ __)
- \  / \__ \
-  \/  (___/
+__  ________
+\  \/ /  ___/
+ \   /\___ \ 
+  \_//____  >
+          \/ 
 '''
 
 
@@ -318,32 +319,49 @@ data = [
 ]
 
 
+def check(choice,A,B):
+    if choice=='B' or choice=='b':
+        if (A["follower_count"]<B["follower_count"]):
+                print("Correct!!!")
+                return True
+        else:
+                print("Wrong!")
+                return False
+    elif choice=='A' or choice=='a':
+        if (B["follower_count"]<A["follower_count"]):
+                print("Correct!!!")
+                return True
+        else:
+                print("Wrong!")
+                return False
+
+      
 import random
+import os
 A=random.choice(data)
 B=random.choice(data)
 score=0
+print(logo1)
 while A!=B:
     print(f"Compare A: {A['name']}, {A['description']} from {A['country']}")
+    print(logo2)
     print(f"Compare B: {B['name']}, {B['description']} from {B['country']}")
+
+    print("Who have more followers? ")
+    print(A["follower_count"])
+    print(B["follower_count"])
+
     choice=input("Your choice: ")
-    if choice=='A' or 'a':
-        if A["follower_count"]>B["follower_count"]:
-                print("Correct")
-                score+=1
-                print(f"Score: {score}")
-        else:
-                print("Wrong")
-                print(f"Final score: {score}")
-                break
+    os.system('cls')
+    
+    if check(choice,A,B)==False:
+          print(f"Final score: {score}")
+          break
     else:
-        if B["follower_count"]>A["follower_count"]:
-                print("Correct")
-                score+=1
-                print(f"Score: {score}")
-        else:
-                print("Wrong")
-                print(f"Final score: {score}")
-                break
+          score+=1
+          print(f"Score: {score}")
+          
+          
     A=B
     B=random.choice(data)
           
