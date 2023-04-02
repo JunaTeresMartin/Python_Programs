@@ -3,6 +3,7 @@
 #DATE     :  02-04-2023
 
 def balance_money(drink):
+    #calculates balance money
     one = int(input("How many one rupee coin(s): "))
     two = int(input("How many two rupee coin(s): "))
     five = int(input("How many five rupee coin(s): "))
@@ -25,12 +26,14 @@ def balance_money(drink):
 
 
 def make_coffee(choice):
+    #makes coffee and deduce the resources
     drinkIs = MENU[choice]
     ingredients = drinkIs['ingredients']
     for item in ingredients:
         resources[item]-=ingredients[item]
 
 def isSufficientIngredients(ingredients):
+    #checks whether there are enough resources
     for item in ingredients:
         if resources[item] <= ingredients[item]:
             print(f"Sorry! There is no enough {item}")
