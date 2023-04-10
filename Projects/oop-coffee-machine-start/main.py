@@ -17,6 +17,11 @@ while is_on:
         cofee_maker.report()
     else:
          drink=menu.find_drink(choice)
-         print(drink)
+         if cofee_maker.is_resource_sufficient(drink):
+            if  money_machine.make_payment(drink):
+                cofee_maker.make_coffee(drink)
+
+
+             
     
 
