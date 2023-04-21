@@ -1,1 +1,1 @@
-from turtle import Turtle,Screen
+from turtle import Turtle
