@@ -1,0 +1,12 @@
+from turtle import *
+t=Turtle()
+t.pensize(5)
+t.color('green')
+t.begin_fill()
+t.fillcolor('green')
+t.circle(-100,180)
+t.right(90)
+t.forward(200)
+t.end_fill()
+s=Screen()
+s.exitonclick()
