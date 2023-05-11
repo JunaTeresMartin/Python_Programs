@@ -15,17 +15,22 @@ import turtle as t
 import random
 dot_turtle = t.Turtle()
 t.colormode(255)
-t.bgcolor('black')
+
+dot_turtle.pu()
+dot_turtle.goto(-130,-130)
+dot_turtle.pd()
+
+#dot_turtle.setheading(0)
 for i in range(10):
     dot_turtle.pu()
-    dot_turtle.goto(0, i * 30)
+    dot_turtle.goto(-130, -130+i*30)
     dot_turtle.pd()
     for j in range(10):
         dot_turtle.dot(10, random.choice(colors))
         dot_turtle.pu()
         dot_turtle.forward(30)
         dot_turtle.pd()
-        
+
 s=t.Screen()
 s.exitonclick()
 
