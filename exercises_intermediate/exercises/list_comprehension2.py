@@ -10,6 +10,9 @@ def negative_count(n_list):
     # return count
     
     return len([n for n in n_list if n<0])
+    #or
+    #return len([n<0 for n in n_list])
 
 c=negative_count(numbers)
 print(c)
+
