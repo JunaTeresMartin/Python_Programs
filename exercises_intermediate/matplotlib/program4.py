@@ -14,4 +14,4 @@ plt.subplot(2,1,2)
 plt.plot(x,y,'o-')
 plt.grid(True)
 
-plt.show()
+plt.show() 
