@@ -1,6 +1,6 @@
 #    Author              : Juna Teres Martin
 #    Last updated on     : 11/05/2023
-#    Program description : Program to make a random walk
+#    Program description : Program to make a spirograph
 
 import turtle as t
 import random
