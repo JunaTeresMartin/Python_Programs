@@ -1,10 +1,11 @@
 from turtle import Turtle,Screen
-
+import time
 #game body
 s=Screen()
 s.setup(600,600)
 s.bgcolor("black")
 s.title('Snake Game')
+s.tracer(0)#Turn turtle animation on/off and set delay for update drawings
 
 #snake
 #turtle default size 20*20
@@ -20,9 +21,14 @@ for position in starting_positions:
 
 is_game_on=True
 while(is_game_on):
-    for seg in segments:
-        seg.forward(20)
-
+    s.update()
+    time.sleep(0.01)
+    for seg in range(len(segments),0,-1):
+        new_x=segments[seg-1].xcor()
+        new_y=segments[seg-1].ycor()
+        segments[seg].goto(new_x,new_y)
+    segments[0].forward(20)
+    segments[0].left(90)
 
 
 s.exitonclick()
