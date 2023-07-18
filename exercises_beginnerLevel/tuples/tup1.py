@@ -1,0 +1,5 @@
+my_tuple=(1,2,5,6,5,1,7)
+print(my_tuple)
+print(my_tuple.count(5))
+print(my_tuple.index(1))
+print(len(my_tuple))
